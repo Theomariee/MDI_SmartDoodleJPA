@@ -99,4 +99,12 @@ typings/
 # Ignore all local history of files
 .history
 
-# End of https://www.gitignore.io/api/node,visualstudiocode
+### Vuejs ###
+# Recommended template: Node.gitignore
+
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# End of https://www.gitignore.io/api/node,visualstudiocode, vuejs
