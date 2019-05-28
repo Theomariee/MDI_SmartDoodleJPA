@@ -27,8 +27,4 @@ public class PollService {
     public void deleteById(Long id) {
     	pollRepository.deleteById(id);
     }
-    
-    public void addSlot(Slot slot) {
-    	pollRepository.addSlot(slot);
-    }
 }
