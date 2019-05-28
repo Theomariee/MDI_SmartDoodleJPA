@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/logo-harfa.jpg">
     <router-link :to="{ name: 'SmartDoodle'}">SmartDoodle</router-link>
     <router-view/>
   </div>
