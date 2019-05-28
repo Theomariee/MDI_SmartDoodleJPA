@@ -19,13 +19,9 @@
 
   <template id="poll">
     <div>
-      <h2>{{ poll.name }}</h2>
-      <b>Description: </b>
+      <h2>{{ poll.title }}</h2>
+      <b>Summary: </b>
       <div>{{ poll.description }}</div>
-      <b>Price:</b>
-      <div>{{ poll.price }}<span class="glyphicon glyphicon-euro"></span></div>
-      <br/>
-      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
       <a>
         <router-link to="/">Back to poll list</router-link>
       </a>
@@ -137,6 +133,6 @@
   <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
   <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
   <script src="/polls.js"></script>
-
+  <script src="/participants.js"></script>
 </body>
 </html>

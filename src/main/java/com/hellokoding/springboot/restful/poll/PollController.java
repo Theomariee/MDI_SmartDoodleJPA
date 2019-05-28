@@ -9,4 +9,12 @@ public class PollController {
     public String list(){
         return "polls";
     }
+    @GetMapping("/poll")
+    public String listPolls(){
+        return "polls";
+    }
+    @GetMapping("/participant")
+    public String listParticipants(){
+        return "polls";
+    }
 }

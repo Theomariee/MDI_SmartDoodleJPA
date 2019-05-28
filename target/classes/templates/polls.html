@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Poll CRUD</h1>
+    <h1>Manage Polls</h1>
     <main id="app">
       <router-view></router-view>
     </main>
@@ -19,13 +19,9 @@
 
   <template id="poll">
     <div>
-      <h2>{{ poll.name }}</h2>
-      <b>Description: </b>
+      <h2>{{ poll.title }}</h2>
+      <b>Summary: </b>
       <div>{{ poll.description }}</div>
-      <b>Price:</b>
-      <div>{{ poll.price }}<span class="glyphicon glyphicon-euro"></span></div>
-      <br/>
-      <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
       <a>
         <router-link to="/">Back to poll list</router-link>
       </a>
@@ -61,7 +57,7 @@
           <!-- tr v-for="poll in polls | filterBy searchKey in 'name'" -->
           <td>
             <a>
-              <router-link :to="{name: 'poll', params: {poll_id: poll.id}}">{{ poll.name }}</router-link>
+              <router-link :to="{name: 'poll', params: {poll_id: poll.id}}">{{ poll.title }}</router-link>
             </a>
           </td>
           <td>{{ poll.summary }}</td>
@@ -123,7 +119,7 @@
   <template id="poll-delete">
     <div>
       <h2>Delete poll {{ poll.name }}</h2>
-      <form @submit="deletepoll">
+      <form @submit="deletePoll">
         <p>The action cannot be undone.</p>
         <button type="submit" class="btn btn-danger">Delete</button>
         <a class="btn btn-default">
@@ -137,6 +133,6 @@
   <script src="https://unpkg.com/vue-router@3.0.2/dist/vue-router.js"></script>
   <script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
   <script src="/polls.js"></script>
-
+  <script src="/participants.js"></script>
 </body>
 </html>

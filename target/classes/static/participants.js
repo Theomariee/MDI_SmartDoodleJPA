@@ -49,13 +49,13 @@ var participantService = {
   }
 }
 
-var List = Vue.extend({
+var ListParticipant = Vue.extend({
   template: '#participant-list',
   data: function () {
     return {participants: [], searchKey: ''};
   },
   computed: {
-    filteredparticipants() {
+    filteredParticipants() {
       return this.participants.filter((participant) => {
       	return participant.firstName.indexOf(this.searchKey) > -1
       	  || participant.secondName.indexOf(this.searchKey) > -1
@@ -67,14 +67,14 @@ var List = Vue.extend({
   }
 });
 
-var participant = Vue.extend({
+var Participant = Vue.extend({
   template: '#participant',
   data: function () {
     return {participant: findParticipant(this.$route.params.participant_id)};
   }
 });
 
-var participantEdit = Vue.extend({
+var ParticipantEdit = Vue.extend({
   template: '#participant-edit',
   data: function () {
     return {participant: findParticipant(this.$route.params.participant_id)};
@@ -86,7 +86,7 @@ var participantEdit = Vue.extend({
   }
 });
 
-var participantDelete = Vue.extend({
+var ParticipantDelete = Vue.extend({
   template: '#participant-delete',
   data: function () {
     return {participant: findParticipant(this.$route.params.participant_id)};
@@ -114,11 +114,11 @@ var AddParticipant = Vue.extend({
 
 var router = new VueRouter({
 	routes: [
-		{path: '/', component: List},
-		{path: '/participant/:participant_id', component: participant, name: 'participant'},
+		{path: '/participant', component: List},
+		{path: '/participant/:participant_id', component: Participant, name: 'participant'},
 		{path: '/add-participant', component: AddParticipant},
-		{path: '/participant/:participant_id/edit', component: participantEdit, name: 'participant-edit'},
-		{path: '/participant/:participant_id/delete', component: participantDelete, name: 'participant-delete'}
+		{path: '/participant/:participant_id/edit', component: ParticipantEdit, name: 'participant-edit'},
+		{path: '/participant/:participant_id/delete', component: ParticipantDelete, name: 'participant-delete'}
 	]
 });
 

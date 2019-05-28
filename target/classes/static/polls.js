@@ -49,7 +49,7 @@ var pollService = {
   }
 }
 
-var List = Vue.extend({
+var ListPoll = Vue.extend({
   template: '#poll-list',
   data: function () {
     return {polls: [], searchKey: ''};
@@ -114,11 +114,12 @@ var AddPoll = Vue.extend({
 
 var router = new VueRouter({
 	routes: [
-		{path: '/', component: List},
+    {path: '/', component: ListPoll},
+    {path: '/poll', component: ListPoll},
 		{path: '/poll/:poll_id', component: Poll, name: 'poll'},
 		{path: '/add-poll', component: AddPoll},
 		{path: '/poll/:poll_id/edit', component: PollEdit, name: 'poll-edit'},
-		{path: '/poll/:poll_id/delete', component: PollDelete, name: 'poll-delete'}
+    {path: '/poll/:poll_id/delete', component: PollDelete, name: 'poll-delete'},
 	]
 });
 

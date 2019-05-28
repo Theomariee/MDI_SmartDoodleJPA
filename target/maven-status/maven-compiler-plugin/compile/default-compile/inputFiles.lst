@@ -4,14 +4,10 @@
 /app/src/main/java/com/hellokoding/springboot/restful/participant/Participant.java
 /app/src/main/java/com/hellokoding/springboot/restful/poll/PollAPI.java
 /app/src/main/java/com/hellokoding/springboot/restful/slot/SlotService.java
-/app/src/main/java/com/hellokoding/springboot/restful/product/ProductService.java
 /app/src/main/java/com/hellokoding/springboot/restful/Application.java
-/app/src/main/java/com/hellokoding/springboot/restful/product/ProductAPI.java
 /app/src/main/java/com/hellokoding/springboot/restful/participant/ParticipantAPI.java
-/app/src/main/java/com/hellokoding/springboot/restful/product/ProductRespository.java
 /app/src/main/java/com/hellokoding/springboot/restful/poll/PollService.java
 /app/src/main/java/com/hellokoding/springboot/restful/slot/Slot.java
-/app/src/main/java/com/hellokoding/springboot/restful/product/Product.java
 /app/src/main/java/com/hellokoding/springboot/restful/slot/SlotAPI.java
 /app/src/main/java/com/hellokoding/springboot/restful/poll/PollRepository.java
 /app/src/main/java/com/hellokoding/springboot/restful/poll/PollController.java
