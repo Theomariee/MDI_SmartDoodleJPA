@@ -14,7 +14,6 @@
       <label>Poll Summary</label>
       <textarea 
         ref="summary"
-        type="text"
         :class="{ 'has-error': submitting && invalidSummary }"
         v-model="poll.summary"
         @focus="clearStatus"
@@ -49,14 +48,14 @@
     },
     methods: {
         handleSubmit() {
-            this.submitting = true
             this.clearStatus()
+            this.submitting = true
 
             if(this.invalidTitle || this.invalidSummary) {
                 this.error = true
                 return
             }
-
+            
             this.$emit('add:poll', this.poll)
             this.$refs.title.focus()
 

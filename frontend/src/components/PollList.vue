@@ -8,8 +8,10 @@
         <tr>
           <th>Poll title</th>
           <th>Poll summary</th>
+          <th>Actions</th>
         </tr>
       </thead>
+
       <tbody>
         <tr v-for="poll in polls" :key="poll.id">
           <td v-if="editing === poll.id">
